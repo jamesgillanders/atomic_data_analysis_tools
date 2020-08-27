@@ -41,7 +41,7 @@ atomic_munber = 41
 wavelength = 20378 * 1e-10  #  Angstroms --> m
 g_upper = (1.5 * 2) + 1
 E_upper = 5297.9 * 0.00012398 * 1.6e-19  # cm^-1 --> J
-flux_in_2_micron_feature = 3.21e32  # J s^-1
+flux_in_feature = 3.21e32  # J s^-1
 A_value = 0.031  # s^-1
 
 """temperature values to consider for the calculation"""
@@ -49,7 +49,7 @@ Temp_values = [500, 1000, 2000, 3000, 4000, 5000, 10000]
 
 output_folder_name = _mkdir(f"output")
 
-number_photons = flux_in_2_micron_feature / (6.63e-34 * 3e8 / wavelength)
+number_photons = flux_in_feature / (6.63e-34 * 3e8 / wavelength)
 number_ions_in_upper_level = number_photons / A_value
 
 """defining lists we will populate later"""
